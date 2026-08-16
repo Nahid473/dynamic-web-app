@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+<title>Civil Job Prep</title>
+<link rel="stylesheet" href="index.css">
+
+
+
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <div class="header-left">
+
+            <button class="menu-btn" onclick="openDrawer()">☰</button>
+
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <div>
+                    <div>CIVIL</div>
+                    <small style="color:#aaa;font-size:10px;">
+                        JOB PREP
+                    </small>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="header-icons">
+
+            <button class="icon-btn" onclick="toggleTheme()">
+                ☀
+            </button>
+
+            <button class="icon-btn notification">
+                🔔
+                <span class="badge">7</span>
+            </button>
+
+        </div>
+
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="content" id="content"></main>
+
+    <!-- BOTTOM NAV -->
+    <nav class="bottom-nav">
+
+        <button class="nav-item active"
+                onclick="showPage('home',this)">
+            <div class="nav-icon">⌂</div>
+            <span>Home</span>
+        </button>
+
+        <button class="nav-item"
+                onclick="showPage('learn',this)">
+            <div class="nav-icon">📖</div>
+            <span>Learn</span>
+        </button>
+
+        <button class="nav-item"
+                onclick="showPage('mock',this)">
+            <div class="nav-icon">▣</div>
+            <span>Exam</span>
+        </button>
+
+        <button class="nav-item"
+                onclick="showPage('progress',this)">
+            <div class="nav-icon">◉</div>
+            <span>Progress</span>
+        </button>
+
+        <button class="nav-item"
+                onclick="showPage('search',this)">
+            <div class="nav-icon">⌕</div>
+            <span>Search</span>
+        </button>
+
+    </nav>
+
+    <!-- OVERLAY -->
+    <div class="overlay" id="overlay" onclick="closeDrawer()"></div>
+
+    <!-- DRAWER -->
+    <aside class="drawer" id="drawer">
+
+        <div class="drawer-profile">
+
+            <div class="profile-top">
+
+                <div class="avatar">👤</div>
+
+                <div>
+                    <div class="profile-name">
+                        Civil Student
+                    </div>
+
+                    <div class="profile-id">
+                        ID : CIVIL2026
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <hr>
+
+        <div class="drawer-item" onclick="drawerPage('profile')">
+            <div class="dicon">👤</div>
+            Profile
+        </div>
+
+        <div class="drawer-item" onclick="drawerPage('progress')">
+            <div class="dicon">📊</div>
+            Performance Statistics
+        </div>
+
+        <div class="drawer-item" onclick="drawerPage('favorites')">
+            <div class="dicon">❤️</div>
+            Favorites
+        </div>
+
+        <div class="drawer-item" onclick="drawerPage('jobs')">
+            <div class="dicon">💼</div>
+            Jobs
+        </div>
+
+        <div class="drawer-item" onclick="drawerPage('interview')">
+            <div class="dicon">🎤</div>
+            Interview
+        </div>
+
+        <div class="drawer-item" onclick="drawerPage('calculator')">
+            <div class="dicon">🧮</div>
+            Civil Calculators
+        </div>
+
+        <hr>
+
+        <div class="drawer-item" onclick="drawerPage('formulas')">
+            <div class="dicon">📐</div>
+            Formulas
+        </div>
+
+        <div class="drawer-item" onclick="drawerPage('site')">
+            <div class="dicon">🦺</div>
+            Site Engineering
+        </div>
+
+        <div class="drawer-item" onclick="drawerPage('ai')">
+            <div class="dicon">🤖</div>
+            AI Assistant
+        </div>
+
+        <div class="drawer-item" onclick="drawerPage('mcq')">
+            <div class="dicon">📝</div>
+            MCQ Practice
+        </div>
+
+        <hr>
+
+        <div class="drawer-item" onclick="drawerPage('settings')">
+            <div class="dicon">⚙️</div>
+            Settings
+        </div>
+
+        <div class="drawer-item" onclick="toast('Feedback section coming soon')">
+            <div class="dicon">💬</div>
+            Give Us Feedback
+        </div>
+
+        <div class="drawer-item" onclick="toast('Logout clicked')">
+            <div class="dicon">↪</div>
+            Logout
+        </div>
+
+        <div style="height:30px"></div>
+
+    </aside>
+
+    <div class="toast" id="toast"></div>
+
+</div>
+<script src="data.js"></script>
+<script src="mcq.js"></script>
+<script src="learn.js"></script>
+
+<script src="interview.js"></script>
+<script src="job.js"></script>
+<script src="index.js"></script>
+
+</body>
+</html>
